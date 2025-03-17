@@ -44,10 +44,11 @@ return {
 
   -- Configuración para mejorar la experiencia de edición de Blade
   {
-    "jwalton512/vim-blade",
-    opts = {
-      -- Opciones de configuración específicas para el resaltado de Blade
-      blade_syntax = true,
-    },
+    "jwalton512/vim-blade", -- Asegúrate de que este sea el nombre correcto del repositorio
+    ft = { "blade", "php" }, -- Solo se activa en archivos .blade.php y .php
+    config = function()
+      -- Puedes agregar configuraciones adicionales aquí si es necesario
+      vim.g.blade_syntax = true -- Habilita la sintaxis de Blade
+    end,
   },
 }
